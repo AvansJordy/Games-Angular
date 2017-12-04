@@ -26,12 +26,14 @@ import {GameService} from "./games/game.service";
     GameListComponent,
     GameDetailComponent,
     GameItemComponent,
-
-    DropdownDirective,
-
-
     GameStartComponent,
-    GameEditComponent
+    GameEditComponent,
+
+    DropdownDirective
+
+
+
+
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     { path: ':id', component: GameDetailComponent },
     { path: ':id/edit', component: GameEditComponent },
   ] },
+
 ];
 
 @NgModule({

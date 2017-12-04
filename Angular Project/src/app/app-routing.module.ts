@@ -5,6 +5,7 @@ import {GamesComponent} from "./games/games.component";
 import {GameStartComponent} from "./games/game-start/game-start.component";
 import {GameEditComponent} from "./games/game-edit/game-edit.component";
 import {GameDetailComponent} from "./games/game-detail/game-detail.component";
+import {DetailedGamesComponent} from "./detailedgames/detailed.component";
 
 const appRoutes: Routes = [
   // { path: '', redirectTo: '/recipes', pathMatch: 'full' },
@@ -23,6 +24,9 @@ const appRoutes: Routes = [
     { path: ':id', component: GameDetailComponent },
     { path: ':id/edit', component: GameEditComponent },
   ] },
+
+  { path: '', redirectTo: '/detailgames', pathMatch: 'full' },
+  { path: 'detailgames', component: DetailedGamesComponent},
 
 ];
 

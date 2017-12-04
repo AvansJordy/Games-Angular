@@ -1,3 +1,3 @@
-export class Ingredient {
+export class Platform {
   constructor(public name: string) {}
 }

@@ -2,16 +2,17 @@
 // Domain class
 //
 
-import {Ingredient} from '../shared/ingredient.model';
+import {Platform} from '../shared/platform.model';
+import {Character} from '../shared/character.model';
 export class Game {
 
   private id: string;
   private _title: string;
   private _genre: string;
   private _description: string;
-  private _characters: Ingredient[];
+  private _characters: Character[];
   private _imagePath: string;
-  private _platforms: Ingredient[];
+  private _platforms: Platform[];
   private _developer: string;
   private _publisher: string;
 
@@ -51,11 +52,11 @@ export class Game {
     this._description = d;
   }
 
-  public get characters(): Ingredient[] {
+  public get characters(): Character[] {
     return this._characters;
   }
 
-  public set characters(c: Ingredient[]) {
+  public set characters(c: Character[]) {
     this._characters = c;
   }
 
@@ -67,11 +68,11 @@ export class Game {
     this._imagePath = i;
   }
 
-  public get platforms(): Ingredient[] {
+  public get platforms(): Platform[] {
     return this._platforms;
   }
 
-  public set platforms(p: Ingredient[]) {
+  public set platforms(p: Platform[]) {
     this._platforms = p;
   }
 

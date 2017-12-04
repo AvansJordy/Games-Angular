@@ -1,3 +1,3 @@
 export class Character {
-  constructor(public name: string) {}
+  constructor(public name: string,  public imagePath: string) {}
 }

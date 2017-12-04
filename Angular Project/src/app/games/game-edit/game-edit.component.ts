@@ -65,7 +65,8 @@ export class GameEditComponent implements OnInit {
   onAddCharacter() {
     (<FormArray>this.gameForm.get('characters')).push(
       new FormGroup({
-        'name': new FormControl(null, Validators.required)
+        'name': new FormControl(null, Validators.required),
+        'imagePath': new FormControl(null)
       })
     );
   }
@@ -102,7 +103,8 @@ export class GameEditComponent implements OnInit {
             for (const character of game.characters) {
               GameCharacters.push(
                 new FormGroup({
-                  'name': new FormControl(character.name, Validators.required)
+                  'name': new FormControl(character.name, Validators.required),
+                  'imagePath': new FormControl(character.imagePath)
                 })
               );
 
@@ -112,9 +114,9 @@ export class GameEditComponent implements OnInit {
             'title': new FormControl(editgame.title, Validators.required),
             'genre': new FormControl(editgame.genre, Validators.required),
             'description': new FormControl(editgame.description, Validators.required),
-            'characters': GamePlatforms,
+            'characters': GameCharacters,
             'imagePath': new FormControl(editgame.imagePath, Validators.required),
-            'platforms': GameCharacters,
+            'platforms': GamePlatforms,
             'developer': new FormControl(editgame.developer, Validators.required),
             'publisher': new FormControl(editgame.publisher, Validators.required),
           });

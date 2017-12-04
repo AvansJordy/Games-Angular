@@ -73,7 +73,7 @@
             <!-- De volgende regel voeg je ook toe -->
             <pre *ngIf="platformCtrl">{{ platformCtrl.value | json }}</pre>
             <div class="col-xs-8">
-              <input type="text" class="form-control" formControlName="name">
+              <input type="text" class="form-control" formControlName="name" placeholder="Platform name">
             </div>
             <div class="col-xs-2">
               <button type="button" class="btn btn-danger" (click)="onDeletePlatform(i)">X</button>
@@ -99,7 +99,7 @@
             <!-- De volgende regel voeg je ook toe -->
             <pre *ngIf="characterCtrl">{{ characterCtrl.value | json }}</pre>
             <div class="col-xs-8">
-              <input type="text" class="form-control" formControlName="name">
+              <input type="text" class="form-control" formControlName="name" placeholder="Character name">
             </div>
             <div class="col-xs-2">
               <button type="button" class="btn btn-danger" (click)="onDeleteCharacter(i)">X</button>

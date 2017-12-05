@@ -23,6 +23,9 @@ import {FilterPipe} from "./games/game-list/filter.pipe";
 
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,

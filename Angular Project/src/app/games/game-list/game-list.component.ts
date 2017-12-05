@@ -13,6 +13,7 @@ import { GameService } from '../game.service';
 export class GameListComponent implements OnInit, OnDestroy {
   games: Game[];
   subscription: Subscription;
+  filteredStatus = '';
 
   constructor(private gameService: GameService,
               private router: Router,

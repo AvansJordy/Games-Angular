@@ -19,6 +19,8 @@ import {GameService} from "./games/game.service";
 import {DetailedGamesComponent} from "./detailedgames/detailed.component";
 import {CharacterDetailComponent} from "./character/character-detail/character-detail.component";
 import {CharacterItemComponent} from "./character/character-item/character-item.component";
+import {FilterPipe} from "./games/game-list/filter.pipe";
+
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import {CharacterItemComponent} from "./character/character-item/character-item.
 
 
     CharacterDetailComponent,
-    CharacterItemComponent
+    CharacterItemComponent,
+    FilterPipe
 
 
 

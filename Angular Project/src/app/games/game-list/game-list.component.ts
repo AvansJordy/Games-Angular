@@ -14,6 +14,7 @@ export class GameListComponent implements OnInit, OnDestroy {
   games: Game[];
   subscription: Subscription;
   filteredStatus = '';
+  filteredGenre = '';
 
   constructor(private gameService: GameService,
               private router: Router,
@@ -38,6 +39,11 @@ export class GameListComponent implements OnInit, OnDestroy {
   onNewGame() {
     this.router.navigate(['new'], {relativeTo: this.route});
   }
+
+  // onGenre() {
+  //   this.router.navigate(['/genre/' + this.game.genre], {relativeTo: this.route});
+  //   // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+  // }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();

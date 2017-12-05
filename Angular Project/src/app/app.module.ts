@@ -20,6 +20,7 @@ import {DetailedGamesComponent} from "./detailedgames/detailed.component";
 import {CharacterDetailComponent} from "./character/character-detail/character-detail.component";
 import {CharacterItemComponent} from "./character/character-item/character-item.component";
 import {FilterPipe} from "./games/game-list/filter.pipe";
+import { GenrefilterPipe } from './games/game-list/genrefilter.pipe';
 
 
 
@@ -45,7 +46,8 @@ import {FilterPipe} from "./games/game-list/filter.pipe";
 
     CharacterDetailComponent,
     CharacterItemComponent,
-    FilterPipe
+    FilterPipe,
+    GenrefilterPipe
 
 
 

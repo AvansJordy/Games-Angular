@@ -11,8 +11,23 @@
   <div class="col-xs-12">
 
     <p style="font-size: 18px">Find your game easier:</p>
-    <input type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..." list="gametitles"  >
-    <input type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..." list="gamegenres">
+
+    <div class="col-md-12">
+      <p class="pull-left">Game Title: </p>
+      <input type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..." list="gametitles"  >
+    </div>
+
+    <div class="col-md-12">
+      <p class="pull-left">Game Genre: </p>
+      <input type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..." list="gamegenres"  >
+    </div>
+
+    <div class="col-md-12">
+      <p class="pull-left">Game Publisher: </p>
+      <input type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..." list="gamepublishers"  >
+    </div>
+
+
 
     <datalist id="gametitles">
       <option *ngFor="let game of games" value="{{game.title}}">
@@ -20,6 +35,10 @@
 
     <datalist id="gamegenres">
       <option *ngFor="let game of games" value="{{game.genre}}">{{game.genre}}</option>
+    </datalist>
+
+    <datalist id="gamepublishers">
+      <option *ngFor="let game of games" value="{{game.publisher}}">{{game.publisher}}</option>
     </datalist>
 
     <!--<div class="btn-group" appDropdown>-->
@@ -36,7 +55,7 @@
 <div class="row">
   <div class="col-xs-12">
     <app-game-item
-      *ngFor="let gameEL of games  | filter:filteredGenre: 'genre'| filter:filteredStatus:'title'; let i = index"
+      *ngFor="let gameEL of games  | filter:filteredGenre: 'genre'| filter:filteredStatus:'title' | filter:filteredPublisher: 'publisher'; let i = index"
       [game]="gameEL"
       [index]="i"></app-game-item>
   </div>

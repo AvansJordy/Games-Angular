@@ -15,6 +15,7 @@ export class GameListComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   filteredStatus = '';
   filteredGenre = '';
+  filteredPublisher = '';
 
   constructor(private gameService: GameService,
               private router: Router,

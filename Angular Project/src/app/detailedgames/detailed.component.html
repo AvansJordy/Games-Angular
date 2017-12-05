@@ -1,8 +1,90 @@
 <div class="row">
-  <div class="col-md-5">
-    <app-game-list-detail></app-game-list-detail>
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-xs-12">
+        <img
+          [src]="game.imagePath"
+          alt="{{ game.title }}"
+          class="img-responsive"
+          style="max-height: 300px;">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>{{ game.title }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        Description: <br>
+        {{ game.description }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        Genre(s): <br>
+        {{ game.genre }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        Game Developer:
+        {{ game.developer }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        Game Publisher:
+        {{ game.publisher }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        Game Platforms:
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let platform of game.platforms">
+            {{ platform.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="col-md-7">
-    <router-outlet></router-outlet>
+
+
+<div class="row">
+  <div class="col-md-12">
+  <div>
+    <h1>Characters</h1>
+    <h5>Select a character for more information</h5>
   </div>
+
+  <div class="col-md-12 text-center">
+    <div>
+      <app-character-item class="col-sm-2"
+      *ngFor="let characterEL of game.characters"
+      [character]="characterEL"
+
+      (characterSelected)="onGameSelected(characterEL)">
+    </app-character-item>
+    </div>
+
+  </div>
+  <div class="col-md-6">
+    <app-character-detail class="scrollmenu"
+      *ngIf="character; else info"
+      [character]="character"></app-character-detail>
+    <ng-template #info>
+      <p>Select an character for more information</p>
+    </ng-template>
+  </div>
+
 </div>
+</div>
+</div>
+

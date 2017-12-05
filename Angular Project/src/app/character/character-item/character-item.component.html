@@ -1,0 +1,16 @@
+<a
+  style="cursor: pointer;"
+  (click)="onSelected()"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+    <span>
+        <img
+          [src]="character.imagePath"
+          alt="{{ character.name }}"
+          class="img-responsive img-rounded"
+          style="max-height: 50px;">
+      </span>
+  <div>
+    <h4 class="list-group-item-heading">{{ character.name }}</h4>
+  </div>
+</a>

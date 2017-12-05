@@ -17,8 +17,9 @@ import {GameEditComponent} from "./games/game-edit/game-edit.component";
 import {GameListComponent} from "./games/game-list/game-list.component";
 import {GameService} from "./games/game.service";
 import {DetailedGamesComponent} from "./detailedgames/detailed.component";
-import {DetailGameComponent} from "./detailedgames/game-list/game-list.component";
-import {GameItemDetailComponent} from "./detailedgames/game-list/game-item/game-item.component";
+import {CharacterDetailComponent} from "./character/character-detail/character-detail.component";
+import {CharacterItemComponent} from "./character/character-item/character-item.component";
+
 
 @NgModule({
   declarations: [
@@ -35,8 +36,10 @@ import {GameItemDetailComponent} from "./detailedgames/game-list/game-item/game-
     DropdownDirective,
 
     DetailedGamesComponent,
-    DetailGameComponent,
-    GameItemDetailComponent
+
+
+    CharacterDetailComponent,
+    CharacterItemComponent
 
 
 

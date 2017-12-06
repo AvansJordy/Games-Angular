@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Gamecharacter} from "../../games/gamecharacter.model";
+import {Character} from "../../shared/character.model";
 
 
 
@@ -9,10 +9,10 @@ import {Gamecharacter} from "../../games/gamecharacter.model";
   styleUrls: ['./character-detail.component.css']
 })
 export class CharacterDetailComponent implements OnInit {
-  @Input() character: Gamecharacter;
+  @Input() character: Character;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.character.details[0].name);
+    console.log(this.character.name);
   }
 }

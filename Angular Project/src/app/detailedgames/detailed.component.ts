@@ -3,6 +3,7 @@ import {ActivatedRoute, Params, Router} from '@angular/router';
 import {GameService} from '../games/game.service';
 import {Game} from '../games/game.model';
 import {Gamecharacter} from "../games/gamecharacter.model";
+import {Character} from "../shared/character.model";
 
 
 @Component({
@@ -32,7 +33,7 @@ export class DetailedGamesComponent implements OnInit {
       );
   }
 
-  onGameSelected(character: Gamecharacter) {
+  onGameSelected(character: Character) {
     console.log('click2');
     this.character = character;
     console.log(character);

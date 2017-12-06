@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "_heroku":      "https://www.angularonrails.com/deploy-rails-application-angular-cli-webpack-front-end/",
-    "start":        "http-server dist/",
-    "lint":         "tslint \"src/**/*.ts\"",
-    "test":         "ng test",
-    "pree2e":       "webdriver-manager update",
-    "e2e":          "protractor",
-    "preinstall":   "npm install -g http-server",
-    "postinstall":  "ng build --prod"
+    "_heroku": "https://www.angularonrails.com/deploy-rails-application-angular-cli-webpack-front-end/",
+    "start": "http-server dist/",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "@angular/router": "^5.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+    "neo4j": "^2.0.0-RC2",
     "rxjs": "5.5.2",
     "zone.js": "^0.8.14"
   },

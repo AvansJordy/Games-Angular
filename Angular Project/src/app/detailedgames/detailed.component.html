@@ -76,8 +76,8 @@
 
   </div>
   <div class="col-md-6">
-    <app-character-detail class="scrollmenu"
-      *ngIf="character; else info"
+    <app-character-detail
+      *ngIf="character"
       [character]="character"></app-character-detail>
     <ng-template #info>
       <p>No Characters were found for this game</p>

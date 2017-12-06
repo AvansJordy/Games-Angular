@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Gamecharacter} from "../../games/gamecharacter.model";
+import {Character} from "../../shared/character.model";
 
 
 
@@ -9,7 +9,7 @@ import {Gamecharacter} from "../../games/gamecharacter.model";
   styleUrls: ['./character-item.component.css']
 })
 export class CharacterItemComponent implements OnInit {
-  @Input() character: Gamecharacter;
+  @Input() character: Character;
   @Output() characterSelected = new EventEmitter<void>();
 
   constructor() { }

@@ -22,8 +22,12 @@
         <li><a style="cursor: pointer;" (click)="onDeleteGame()">Delete Game</a></li>
       </ul>
     </div>
-  </div>
+
+    <button class="btn btn-primary" routerLink="/detailgames/{{id}}">More details</button>
+
 </div>
+
+
 <div class="row">
   <div class="col-xs-12">
     <h1>{{ game.title }}</h1>
@@ -32,56 +36,53 @@
 
 <div class="row">
   <div class="col-xs-12">
-    Description: <br>
+    <strong>Description: </strong><br>
     {{ game.description }}
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    Genre:
+    <strong>Genre:</strong>
     {{ game.genre }}
   </div>
 </div>
 
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--<strong>Game Developer:</strong>-->
+    <!--{{ game.developer }}-->
+  <!--</div>-->
+<!--</div>-->
 <div class="row">
   <div class="col-xs-12">
-    Game Developer:
-    {{ game.developer }}
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    Game Publisher:
+    <strong>Game Publisher:</strong>
     {{ game.publisher }}
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-12">
-    Game Platforms:
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let platform of game.platforms">
-        {{ platform.name }}
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>Game Characters</h1>
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let character of game.characters">
-        {{ character.name }}
-      </li>
-    </ul>
-  </div>
-</div>
-<div class="row" >
-  <div class="col-xs-12">
-    <button class="btn btn-primary" routerLink="/detailgames/{{id}}">More details</button>
-  </div>
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--<strong>Game Platforms:</strong>-->
+    <!--<ul class="list-group">-->
+      <!--<li-->
+        <!--class="list-group-item"-->
+        <!--*ngFor="let platform of game.platforms">-->
+        <!--{{ platform.name }}-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+  <!--<div class="col-xs-12">-->
+    <!--<h1>Game Characters</h1>-->
+    <!--<ul class="list-group">-->
+      <!--<li-->
+        <!--class="list-group-item"-->
+        <!--*ngFor="let character of game.characters">-->
+        <!--{{ character.name }}-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
+<!--</div>-->
+
 </div>

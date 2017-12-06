@@ -13,24 +13,24 @@
     <p style="font-size: 18px">Find your game easier:</p>
 
     <div class="col-md-12">
-      <p class="pull-left">Game Title: </p>
-      <input type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..." list="gametitles"  >
+      <p class="pull-left col-md-6">Game Title: </p>
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..." list="gametitles"  >
     </div>
 
     <div class="col-md-12">
-      <p class="pull-left">Game Genre: </p>
-      <input type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..." list="gamegenres"  >
+      <p class="pull-left col-md-6">Game Genre: </p>
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..." list="gamegenres"  >
     </div>
 
     <div class="col-md-12">
-      <p class="pull-left">Game Publisher: </p>
-      <input type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..." list="gamepublishers"  >
+      <p class="pull-left col-md-6">Game Publisher: </p>
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..." list="gamepublishers"  >
     </div>
 
 
 
     <datalist id="gametitles">
-      <option *ngFor="let game of games" value="{{game.title}}">
+      <option *ngFor="let game of games" value="{{game.title}}">{{game.title}}</option>
     </datalist>
 
     <datalist id="gamegenres">
@@ -55,7 +55,7 @@
 <div class="row">
   <div class="col-xs-12">
     <app-game-item
-      *ngFor="let gameEL of games  | filter:filteredGenre: 'genre'| filter:filteredStatus:'title' | filter:filteredPublisher: 'publisher'; let i = index"
+      *ngFor="let gameEL of games | filter:filteredGenre: 'genre'| filter:filteredStatus:'title' | filter:filteredPublisher: 'publisher'; let i = index"
       [game]="gameEL"
       [index]="i"></app-game-item>
   </div>

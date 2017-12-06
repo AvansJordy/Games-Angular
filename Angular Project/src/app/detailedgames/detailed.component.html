@@ -1,5 +1,8 @@
+
 <div class="row">
   <div class="col-md-6">
+    <button class="btn btn-primary" routerLink="/games">< Back to list</button>
+    <button class="btn btn-primary" routerLink="/games/{{id}}/edit">Edit game</button>
     <div class="row">
       <div class="col-xs-12">
         <img
@@ -18,33 +21,33 @@
 
     <div class="row">
       <div class="col-xs-12">
-        Description: <br>
+        <strong>Description: </strong><br>
         {{ game.description }}
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12">
-        Genre(s): <br>
+        <strong>Genre(s): </strong><br>
         {{ game.genre }}
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12">
-        Game Developer:
+        <strong>Game Developer: </strong>
         {{ game.developer }}
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-        Game Publisher:
+        <strong>Game Publisher: </strong>
         {{ game.publisher }}
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
-        Game Platforms:
+        <strong>Game Platforms:</strong>
         <ul class="list-group">
           <li
             class="list-group-item"

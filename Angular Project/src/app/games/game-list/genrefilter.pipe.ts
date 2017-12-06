@@ -1,9 +1,12 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Input, Pipe, PipeTransform} from '@angular/core';
+import {Game} from "../game.model";
 
 @Pipe({
   name: 'genrefilter'
 })
 export class GenrefilterPipe implements PipeTransform {
+  @Input() game: Game;
+  @Input() index: string;
 
   transform(value: any, filterString: string, propName: string): any {
     if (value.length === 0 || filterString === '') {
@@ -11,6 +14,7 @@ export class GenrefilterPipe implements PipeTransform {
     }
     const resultArray = [];
     for (const item of value) {
+      this.index = this.game._id;
 
       if (item[propName] === filterString) {
         resultArray.push(item);

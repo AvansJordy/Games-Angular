@@ -119,6 +119,7 @@ export class GameEditComponent implements OnInit {
             'platforms': GamePlatforms,
             'developer': new FormControl(editgame.developer, Validators.required),
             'publisher': new FormControl(editgame.publisher, Validators.required),
+            'releaseYear': new FormControl(editgame.releaseYear, Validators.required)
           });
         })
         .catch(error => console.log(error));
@@ -133,6 +134,7 @@ export class GameEditComponent implements OnInit {
       'platforms': new FormArray([]),
       'developer': new FormControl('', Validators.required),
       'publisher': new FormControl('', Validators.required),
+      'releaseYear': new FormControl('', Validators.required)
     });
   }
 

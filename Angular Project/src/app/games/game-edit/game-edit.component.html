@@ -65,6 +65,15 @@
       </div>
 
       <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="releaseyear">Release year</label>
+            <input type="text" id="releaseYear" formControlName="releaseYear" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col-xs-12" formArrayName="platforms">
           <label>Platforms</label>
           <!-- Oorspronkelijk: <div class="row" *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index" [formGroupName]="i" -->

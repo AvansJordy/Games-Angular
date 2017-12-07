@@ -15,6 +15,7 @@ export class Game {
   private _platforms: Platform[];
   private _developer: string;
   private _publisher: string;
+  private _releaseYear: number;
 
 
   constructor(values: Object = {}) {
@@ -85,11 +86,19 @@ export class Game {
   }
 
   public get publisher(): string {
-    return this._publisher;
-  }
+  return this._publisher;
+}
 
   public set publisher(p: string) {
     this._publisher = p;
+  }
+
+  public get releaseYear(): number {
+    return this._releaseYear;
+  }
+
+  public set releaseYear(y: number) {
+    this._releaseYear = y;
   }
 
 

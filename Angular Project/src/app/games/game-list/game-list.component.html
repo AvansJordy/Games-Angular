@@ -14,40 +14,19 @@
 
     <div class="col-md-12">
       <p class="pull-left col-md-6">Game Title: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..." list="gametitles"  >
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..."  >
     </div>
 
     <div class="col-md-12">
       <p class="pull-left col-md-6">Game Genre: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..." list="gamegenres"  >
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..."  >
     </div>
 
     <div class="col-md-12">
       <p class="pull-left col-md-6">Game Publisher: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..." list="gamepublishers"  >
+      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..."  >
     </div>
 
-
-
-    <datalist id="gametitles">
-      <option *ngFor="let game of games" value="{{game.title}}">{{game.title}}</option>
-    </datalist>
-
-    <datalist id="gamegenres">
-      <option *ngFor="let game of games" value="{{game.genre}}">{{game.genre}}</option>
-    </datalist>
-
-    <datalist id="gamepublishers">
-      <option *ngFor="let game of games" value="{{game.publisher}}">{{game.publisher}}</option>
-    </datalist>
-
-    <!--<div class="btn-group" appDropdown>-->
-      <!--<button type="button" class="btn btn-primary dropdown-toggle">Manage Game <span class="caret"></span></button>-->
-      <!--<ul class="dropdown-menu">-->
-        <!--<li *ngFor="let game of games | filter:filteredGenre: 'genre'"  ><a style="cursor: pointer;" (click)="onGenre()">{{game.genre}}</a></li>-->
-        <!--<li></li>-->
-      <!--</ul>-->
-    <!--</div>-->
 
   </div>
 </div>

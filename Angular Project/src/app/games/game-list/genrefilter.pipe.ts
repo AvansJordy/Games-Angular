@@ -9,7 +9,7 @@ export class GenrefilterPipe implements PipeTransform {
   @Input() index: string;
 
   transform(value: any, filterString: string, propName: string): any {
-    if (value.length === 0 || filterString === '') {
+    if (value === 0 || filterString === '') {
       return value;
     }
     const resultArray = [];

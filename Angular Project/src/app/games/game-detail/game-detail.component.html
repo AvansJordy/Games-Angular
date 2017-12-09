@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="col-xs-12">
+<div class="itemStyle">
+<div class="row rowspacing">
+  <div class="col-xs-12 imageSpacing">
     <img
       [src]="game.imagePath"
       alt="{{ game.title }}"
@@ -7,15 +8,15 @@
       style="max-height: 300px;">
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-12">
+<div class="row itemSpacing">
+  <div class="col-xs-12 bottomSpacing">
     <div
-      class="btn-group"
+      class="btn-group buttonStyle"
       appDropdown>
       <button
         type="button"
         class="btn btn-primary dropdown-toggle">
-        Manage Game <span class="caret"></span>
+        Manage Game <span class="glyphicon glyphicon-collapse-down"></span>
       </button>
       <ul class="dropdown-menu">
         <li><a style="cursor: pointer;" (click)="onEditGame()">Edit Game Information</a></li>
@@ -23,66 +24,42 @@
       </ul>
     </div>
 
-    <button class="btn btn-primary" routerLink="/detailgames/{{id}}">More details</button>
-
-</div>
-
-
-<div class="row">
-  <div class="col-xs-12">
-    <h1>{{ game.title }}</h1>
+    <button class="btn btn-info buttonStyle" routerLink="/detailgames/{{id}}">More details <span class="glyphicon glyphicon-new-window"></span></button>
+    <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ game.title }}</h1>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <strong>Description: </strong><br>
-    {{ game.description }}
-  </div>
-</div>
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>Description: </strong><br>
+        {{ game.description }}
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <strong>Genre:</strong>
-    {{ game.genre }}
-  </div>
-</div>
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>Genre:</strong>
+        {{ game.genre }}
+      </div>
+    </div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <strong>Release year:</strong>
-    {{ game.releaseYear }}
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>Release year:</strong>
+        {{ game.releaseYear }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <strong>Game Publisher:</strong>
+        {{ game.publisher }}
+      </div>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <strong>Game Publisher:</strong>
-    {{ game.publisher }}
-  </div>
-</div>
-<!--<div class="row">-->
-  <!--<div class="col-xs-12">-->
-    <!--<strong>Game Platforms:</strong>-->
-    <!--<ul class="list-group">-->
-      <!--<li-->
-        <!--class="list-group-item"-->
-        <!--*ngFor="let platform of game.platforms">-->
-        <!--{{ platform.name }}-->
-      <!--</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-<!--</div>-->
-<!--<div class="row">-->
-  <!--<div class="col-xs-12">-->
-    <!--<h1>Game Characters</h1>-->
-    <!--<ul class="list-group">-->
-      <!--<li-->
-        <!--class="list-group-item"-->
-        <!--*ngFor="let character of game.characters">-->
-        <!--{{ character.name }}-->
-      <!--</li>-->
-    <!--</ul>-->
-  <!--</div>-->
-<!--</div>-->
 
+
+
+</div>
 </div>

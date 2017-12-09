@@ -1,35 +1,46 @@
-<div class="row">
-  <div class="col-xs-8">
-    <p style="font-size: 20px">Game not found? Add the game!</p>
-  </div>
-  <div class="col-xs-3">
-    <button class="btn btn-success" (click)="onNewGame()">New Game</button>
-  </div>
-</div>
-
-<div class="row">
+<div class="row marginAddSection">
   <div class="col-xs-12">
 
-    <p style="font-size: 18px">Find your game easier:</p>
+    <h3>Find your game easier:</h3>
 
-    <div class="col-md-12">
-      <p class="pull-left col-md-6">Game Title: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..."  >
+    <div>
+      <div class="col-md-4 filterSpacingP">
+        <p class="pull-right">Game Title: </p>
+      </div>
+      <div class="col-md-8 filterSpacing">
+        <input class="pull-left form-control" type="text" [(ngModel)]="filteredStatus" placeholder="Search for game..."  >
+      </div>
     </div>
 
-    <div class="col-md-12">
-      <p class="pull-left col-md-6">Game Genre: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..."  >
+    <div>
+      <div class="col-md-4 filterSpacingP">
+        <p class="pull-right">Game Genre: </p>
+      </div>
+      <div class="col-md-8 filterSpacing">
+        <input class="pull-left form-control" type="text" [(ngModel)]="filteredGenre" placeholder="Search for genre..."  >
+      </div>
     </div>
 
-    <div class="col-md-12">
-      <p class="pull-left col-md-6">Game Publisher: </p>
-      <input class="pull-left col-md-6" type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..."  >
+    <div>
+      <div class="col-md-4 filterSpacingP">
+        <p class="pull-right">Game Publisher: </p>
+      </div>
+      <div class="col-md-8 filterSpacing">
+        <input class="pull-left form-control" type="text" [(ngModel)]="filteredPublisher" placeholder="Search for publisher..."  >
+      </div>
     </div>
-
-
   </div>
 </div>
+
+<div class="row" style="margin-top: 30px;">
+  <div class="col-xs-8">
+    <h5>Game not found? Add the game!</h5>
+  </div>
+  <div class="col-xs-3">
+    <button class="btn btn-success itemStyle" (click)="onNewGame()"><span class="glyphicon glyphicon-plus iconButton"></span>New Game</button>
+  </div>
+</div>
+
 <hr>
 <div class="row">
   <div class="col-xs-12">

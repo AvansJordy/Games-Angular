@@ -35,6 +35,11 @@ export class GameDetailComponent implements OnInit {
     // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
   }
 
+  onEditCharacter() {
+    this.router.navigate([':id/:charid'], {relativeTo: this.route});
+    // this.router.navigate(['../', this.id, 'edit'], {relativeTo: this.route});
+  }
+
 
   onDeleteGame() {
     this.gameService.deleteGame(this.id);

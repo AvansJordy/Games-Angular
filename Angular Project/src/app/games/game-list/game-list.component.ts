@@ -23,7 +23,7 @@ export class GameListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscription = this.gameService.gamesChanged
+    this.subscription = this.gameService.gameChanged
       .subscribe(
         (games: Game[]) => {
           this.gameService.getGames()

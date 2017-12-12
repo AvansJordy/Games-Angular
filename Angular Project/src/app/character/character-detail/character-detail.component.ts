@@ -10,9 +10,9 @@ import {Character} from "../../shared/character.model";
 })
 export class CharacterDetailComponent implements OnInit {
   @Input() character: Character;
+  @Input() gameId: string;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.character.name);
   }
 }

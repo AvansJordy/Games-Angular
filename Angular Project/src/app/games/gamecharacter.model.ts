@@ -1,9 +1,11 @@
-import {Character} from '../character/character.model';
 export class Gamecharacter {
   private id: string;
   private _name: string;
   private _imagepath: string;
-  private _details: Character
+
+  constructor(values: object = {}) {
+    Object.assign(this, values);
+  }
 
   public get _id() {
     return this.id;
@@ -11,14 +13,6 @@ export class Gamecharacter {
 
   public set _id(n: string) {
     this.id = n;
-  }
-
-  public get details() {
-    return this._details;
-  }
-
-  public set details(n: Character) {
-    this._details = n;
   }
 
   public get name() {

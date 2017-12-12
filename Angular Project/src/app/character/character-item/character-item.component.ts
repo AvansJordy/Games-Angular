@@ -10,6 +10,8 @@ import {Character} from "../../shared/character.model";
 })
 export class CharacterItemComponent implements OnInit {
   @Input() character: Character;
+  @Input() gameId: string;
+  @Input() index: number;
   @Output() characterSelected = new EventEmitter<void>();
 
   constructor() { }

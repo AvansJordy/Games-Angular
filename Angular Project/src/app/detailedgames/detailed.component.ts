@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {GameService} from '../games/game.service';
 import {Game} from '../games/game.model';
@@ -14,7 +14,10 @@ import {Character} from "../shared/character.model";
 export class DetailedGamesComponent implements OnInit {
   game: Game = new Game({title: 'loading', imagePath: ''});
   character: { name: string, imagePath: string};
+  @Input() gameId: string;
+  index: number;
   id: string;
+  relGame: Game[];
 
   constructor(private gameService: GameService,
               private route: ActivatedRoute,
@@ -28,7 +31,8 @@ export class DetailedGamesComponent implements OnInit {
           this.id = params['id'];
           this.gameService.getGame(this.id).then(res => {
             this.game = res;
-          });
+          }).then(() => this.gameService.getGamesRel(this.game.genre)
+            .then((res) => this.relGame = res) );
         }
       );
   }

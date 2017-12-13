@@ -24,6 +24,8 @@ import { GenrefilterPipe } from './games/game-list/genrefilter.pipe';
 import { DeveloperfilterPipe } from './games/game-list/developerfilter.pipe';
 import {CharacterAddComponent} from "./games/character-add/character-add.component";
 import {RelGameItemComponent} from "./detailedgames/game-rel-item/game-rel-item.component";
+import {IfnotDirective} from "./directiveCustom";
+
 
 
 
@@ -55,7 +57,9 @@ import {RelGameItemComponent} from "./detailedgames/game-rel-item/game-rel-item.
 
     CharacterAddComponent,
 
-    RelGameItemComponent
+    RelGameItemComponent,
+
+    IfnotDirective
 
 
 
